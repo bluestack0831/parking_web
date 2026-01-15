@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>주차 위치 지도</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Leaflet CSS -->
+         <link
+         rel="stylesheet"
+         href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+         />
+
+         <!-- Leaflet JS -->
+          <script
+          src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          defer
+          ></script>
+
+          <!-- 내 JS -->
+           <script src="app.js" defer></script>
+
+           <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+            #map {
+                width: 100%;
+                height: 100vh;
+            }
+           </style>
+    </head>
+
+    <body>
+        <h2>주차 위치 지도</h2>
+        <div id="map"></div>
+
+        <div id="imageModal" style="
+            display:none;
+            position:fixed;
+            z-index:9999;
+            top:0; left:0;
+            width:100%; height:100%;
+            background:rgba(0,0,0,0.8);
+            justify-content:center;
+            align-items:center;
+            ">
+            <img id="modalImage" style="
+                max-width:90%;
+                max-height:90%;
+                border-radius:10px;
+                box-shadow:0 0 20px #000;
+            "/>
+        </div>
+    </body>
+</html>
